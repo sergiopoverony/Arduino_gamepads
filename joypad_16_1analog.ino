@@ -27,7 +27,7 @@ class CButton {
     pin = p;
   }
 };
-
+//A,B,X,Y,L-shift,R-shift,L-trigger,R-trigger,Select,Start,HK,none,up,down,left,right
 CButton Buttons[PINS] ={A2,A3,0,1,2,3,4,5,6,7,8,9,10,13,14,15,16,22};
 
 void setup() {
