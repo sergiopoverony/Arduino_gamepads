@@ -1,6 +1,6 @@
 /* Not tested code */
 #include <Joystick.h>
-#define PINS 13
+#define PINS 15
 
 #define ENABLE_ANALOG true
 int X1 = A0;
@@ -30,7 +30,7 @@ class CButton {
   }
 };
 //A,B,X,Y,L-shift,R-shift,L-trigger,R-trigger,Select,Start,HK,none,up,down,left,right
-CButton Buttons[PINS] ={0,1,2,3,4,5,6,7,8,9,10,14,15};
+CButton Buttons[PINS] ={0,1,2,3,4,5,6,7,8,9,10,14,15,16,17};
  
 void setup() {
 //open console for battery status
