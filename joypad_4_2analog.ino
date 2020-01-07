@@ -43,8 +43,8 @@ void setup() {
 
   Joystick.begin();
   if (ENABLE_ANALOG) {
-    Joystick.setXAxisRange(256, -256);
-    Joystick.setYAxisRange(256, -256);
+    Joystick.setXAxisRange(230, -256);
+    Joystick.setYAxisRange(160, -256);
     Joystick.setRxAxisRange(-256, 256);
     Joystick.setRyAxisRange(256, -256);    
   } 
