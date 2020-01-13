@@ -1,6 +1,6 @@
 /* Not tested code */
 #include <Joystick.h>
-#define PINS 15
+#define PINS 16
 
 #define ENABLE_ANALOG true
 int X1 = A0;
@@ -30,7 +30,8 @@ class CButton {
   }
 };
 //A,B,X,Y,L-shift,R-shift,L-trigger,R-trigger,Select,Start,HK,none,up,down,left,right
-CButton Buttons[PINS] ={0,1,2,3,4,5,6,7,8,9,10,14,15,16,17};
+CButton Buttons[PINS] ={3,15,4,14,5,2,16,10,0,1,11,12,9,7,8,6};
+//0 select 1 start, 2 r shift, 3- A, 4-X,5-l shift, 6-right, 7 -down, 8 -left, 9 up, 10 -R trigger, 11 - pusto, 12 - pusto, 13 - pusto, 14 -Y, 15-B, 16-L trigger,
  
 void setup() {
 //open console for battery status
@@ -45,8 +46,8 @@ void setup() {
   if (ENABLE_ANALOG) {
     Joystick.setXAxisRange(230, -256);
     Joystick.setYAxisRange(160, -256);
-    Joystick.setRxAxisRange(-256, 256);
-    Joystick.setRyAxisRange(256, -256);    
+    Joystick.setRxAxisRange(-256, 160);
+    Joystick.setRyAxisRange(-256, 230);    
   } 
 }
  
@@ -54,8 +55,8 @@ void JButtonStates() {
   if (ENABLE_ANALOG) {
     Joystick.setXAxis(analogRead(X1) - 512);
     Joystick.setYAxis(analogRead(Y1) - 512);
-    Joystick.setRxAxis(analogRead(X2) - 512);
-    Joystick.setRyAxis(analogRead(Y2) - 512);    
+    Joystick.setRxAxis(analogRead(Y2) - 512);
+    Joystick.setRyAxis(analogRead(X2) - 512);    
   }
 
   
