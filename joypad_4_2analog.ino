@@ -47,7 +47,7 @@ void setup() {
     Joystick.setXAxisRange(230, -256);
     Joystick.setYAxisRange(160, -256);
     Joystick.setRxAxisRange(-256, 160);
-    Joystick.setRyAxisRange(-256, 230);    
+    Joystick.setRyAxisRange(-200, 230);    
   } 
 }
  
@@ -62,7 +62,7 @@ void JButtonStates() {
   
   for (int i = 0; i < PINS; i++) {
     int currentState = !digitalRead(Buttons[i].pin);
-   
+     
     if (currentState != Buttons[i].lastState) {
       Joystick.setButton(i, currentState);
       Buttons[i].lastState = currentState;
