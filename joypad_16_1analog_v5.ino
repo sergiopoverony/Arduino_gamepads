@@ -73,5 +73,5 @@ void BatteryStatus()
 void loop() {
   JButtonStates();
 BatteryStatus(); 
-  delay(25);
+  delay(15);
 }
