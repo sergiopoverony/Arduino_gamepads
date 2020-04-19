@@ -30,7 +30,7 @@ class CButton {
   }
 };
 /*A,B,X,Y,L-shift,R-shift,L-trigger,R-trigger,Select,Start,HK,none,up,down,left,right*/
-CButton Buttons[PINS] ={3,15,4,14,5,2,16,10,0,1,12,13,9,7,8,6};
+CButton Buttons[PINS] ={3,15,4,14,5,2,16,10,0,1,12,13, 9, 7,8,6};
  
 void setup() {
 //open console for battery status
