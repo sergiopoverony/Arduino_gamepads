@@ -29,9 +29,8 @@ class CButton {
     pin = p;
   }
 };
-//A,B,X,Y,L-shift,R-shift,L-trigger,R-trigger,Select,Start,HK,none,up,down,left,right
-CButton Buttons[PINS] ={3,15,4,14,5,2,16,10,0,1,11,12,9,7,8,6};
-//0 select 1 start, 2 r shift, 3- A, 4-X,5-l shift, 6-right, 7 -down, 8 -left, 9 up, 10 -R trigger, 11 - pusto, 12 - pusto, 13 - pusto, 14 -Y, 15-B, 16-L trigger,
+/*A,B,X,Y,L-shift,R-shift,L-trigger,R-trigger,Select,Start,HK,none,up,down,left,right*/
+CButton Buttons[PINS] ={3,15,4,14,5,2,16,10,0,1,12,13,9,7,8,6};
  
 void setup() {
 //open console for battery status
@@ -73,12 +72,12 @@ void JButtonStates() {
 void BatteryStatus()
 {
   int sensorValue = analogRead(BatterPin); //read the A5 pin value
-  float voltage = sensorValue * (5.00 / 1024.00) * 100; //convert the value to a true voltage.
+  int voltage = sensorValue * (5.00 / 1024.00) * 100; //convert the value to a true voltage.
   Serial.println(voltage); //print the voltage to tty console
 }
 
 void loop() {
   JButtonStates();
-  BatteryStatus(); 
-  delay(25);
+  BatteryStatus();
+  delay(15);
 }
