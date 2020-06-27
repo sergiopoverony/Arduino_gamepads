@@ -63,7 +63,7 @@ void JButtonStates() {
 void BatteryStatus()
 {
   int sensorValue = analogRead(BatterPin); //read the A5 pin value
-  float voltage = sensorValue * (5.00 / 1023.00) * 100; //convert the value to a true voltage.
+  float voltage = sensorValue * (5.00 / 1024.00) * 100; //convert the value to a true voltage.
   Serial.println(voltage); //print the voltage to tty console
 }
 
